@@ -76,7 +76,7 @@ begin
       // para garantir
       qryInsert.ParamByName('Empre_Func').AsInteger := IIf(obj.Empre_Func > 0, obj.Empre_Func, TSessionManager.Session.Codig_Empr);
       qryInsert.ExecSQL;
-      Dm.ItrIntsys.Commit;
+      Dm.Transaction.Commit;
     end;
   finally
     qryAtual.Free;
