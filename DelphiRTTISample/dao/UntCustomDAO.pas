@@ -24,7 +24,7 @@ uses
 function TCustomDAO.CreateQuery(sql: string): TIBQuery;
 begin
   result := TIBQuery.Create(nil);
-  result.Database := Dm.IdbIntsys;
+  result.Database := Dm.Database;
   if Trim(sql) <> '' then
     result.SQL.Text := sql;
 end;

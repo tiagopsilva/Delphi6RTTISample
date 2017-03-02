@@ -7,8 +7,8 @@ uses
 
 type
   TDm = class(TDataModule)
-    IdbIntsys: TIBDatabase;
-    ItrIntsys: TIBTransaction;
+    Database: TIBDatabase;
+    Transaction: TIBTransaction;
   end;
 
 var
